@@ -1,0 +1,18 @@
+{
+    "presets": [
+        [
+            "env",
+            {
+                "targets": {
+                    "node": "current"
+                },
+                "include": [
+                    "transform-es2015-modules-commonjs"
+                ]
+            }
+        ]
+    ],
+    "plugins": [
+        "babel-plugin-transform-class-properties"
+      ]
+}
