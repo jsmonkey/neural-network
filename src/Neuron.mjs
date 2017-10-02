@@ -1,17 +1,22 @@
 class Neuron {
-    input_connections = [];
-    output_connections = [];
-    input_value = 0;
-    output_value = 0;
-    error = 0;
+   
+    constructor(isBiasNeuron = false) {
+        this.isBiasNeuron = isBiasNeuron;
+        this.input_connections = [];
+        this.output_connections = [];
+        this.input_value = 0;
+        this.output_value = 1;
+        this.error = 0;
 
-    training_speed = 0.5;
+        this.learning_rate = 0.15;
+        this.momentum = 0.5;
+    }
 
     feedForward() {
         this.input_value = this.input_connections.reduce((sum, conn) => {
             return sum + conn.from.output_value * conn.weight;
         }, 0);
-
+    
         this.output_value = this.activationFunction(this.input_value);
     }
 
@@ -39,10 +44,11 @@ class Neuron {
 
     updateInputConnectionsWeigths() {
         this.input_connections.forEach(conn => {
-            const delta_weight = this.training_speed * this.error * conn.from.output_value;
-            conn.weight += delta_weight;
-        })
+            const delta_weight = this.learning_rate * this.error * conn.from.output_value + this.momentum * conn.deltaWeight;
+            conn.deltaWeight = delta_weight;
+            conn.weight += delta_weight;  
+        });
     }
 }
 
-export default Neuron;
+module.exports = Neuron;

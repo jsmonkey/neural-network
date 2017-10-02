@@ -1,21 +1,12 @@
 {
   "name": "neural-network",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/index.mjs",
   "scripts": {
-    "start": "cross-env babel-node src/index.js",
-    "test": "nyc mocha test/index.js"
+    "start": "node src/index.mjs"
   },
   "repository": "https://github.com/jsmonkey/neural-network.git",
   "license": "MIT",
-  "devDependencies": {
-    "cross-env": "^5.0.5",
-    "babel-preset-env": "^1.6.0",
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-class-properties": "^6.24.1"
-  },
-  "dependencies": {},
-  "engines": {
-    "node": "8.6.0"
-  }
+  "devDependencies": {},
+  "dependencies": {}
 }
