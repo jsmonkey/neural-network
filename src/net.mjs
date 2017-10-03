@@ -1,5 +1,5 @@
-const Neuron = require('./neuron.js');
-const Connection = require('./connection.js');
+import Neuron from './neuron';
+import Connection from './connection';
 
 class Net {
 
@@ -120,4 +120,4 @@ class Net {
     }
 }
 
-module.exports = Net;
+export default Net;

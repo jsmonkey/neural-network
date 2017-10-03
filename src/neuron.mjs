@@ -51,4 +51,4 @@ class Neuron {
     }
 }
 
-module.exports = Neuron;
+export default Neuron;

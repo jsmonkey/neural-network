@@ -12,4 +12,4 @@ class DataGenerator {
     }
 }
 
-module.exports = DataGenerator;
+export default DataGenerator;

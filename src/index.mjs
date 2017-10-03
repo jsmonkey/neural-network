@@ -1,5 +1,5 @@
-const DataGenerator = require('./data-generator.js');
-const Net = require('./net.js');
+import DataGenerator from './data-generator';
+import Net from './net';
 
 const topology = [2, 3, 2, 1];
 const iterations =30000;
