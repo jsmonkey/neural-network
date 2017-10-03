@@ -1,10 +1,15 @@
-const training_set = require('../training-set.json');
-const Net = require('./Net.mjs');
+const DataGenerator = require('./data-generator.js');
+const Net = require('./net.js');
 
-const { topology, imput_num, data_set } = training_set;
-const net = new Net(topology, imput_num);
+const topology = [2, 3, 2, 1];
+const iterations =30000;
 
-data_set.forEach((data, i) => {
+const data_generator = new DataGenerator();
+const net = new Net(topology);
+
+for(let i=0; i < iterations; i++) {
+    const data = data_generator.generateANDData();
+
     net.feedForward(data.input);
     net.backPropagation(data.output);
 
@@ -16,4 +21,4 @@ data_set.forEach((data, i) => {
     Net error: ${net.error}`
 
     console.log(report);
-});
+}

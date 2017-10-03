@@ -1,9 +1,9 @@
 {
   "name": "neural-network",
   "version": "1.0.0",
-  "main": "src/index.mjs",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.mjs"
+    "start": "node src/index.js"
   },
   "repository": "https://github.com/jsmonkey/neural-network.git",
   "license": "MIT",

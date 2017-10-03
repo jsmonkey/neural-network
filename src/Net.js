@@ -1,5 +1,5 @@
-const Neuron = require('./Neuron.mjs');
-const Connection = require('./Connection.mjs');
+const Neuron = require('./neuron.js');
+const Connection = require('./connection.js');
 
 class Net {
 
