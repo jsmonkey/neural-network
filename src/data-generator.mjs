@@ -4,10 +4,14 @@ class DataGenerator {
     }
 
     generateANDData() {
-        const input = [ this.randomBinaryValue(), this.randomBinaryValue()];
+        const input = [ 
+            this.randomBinaryValue(),
+            this.randomBinaryValue(),
+        ];
+
         return {
             input,
-            output: [ input[0] & input[1]],
+            output: [ input[0] & input[1] ],
         };
     }
 }
