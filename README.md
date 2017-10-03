@@ -1,5 +1,4 @@
-# Binary neural network
-
+# Neural network
 Implementation of basic neural network.
 
 ## Requirements
