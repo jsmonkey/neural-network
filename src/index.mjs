@@ -2,7 +2,7 @@ import DataGenerator from './data-generator';
 import Net from './net';
 
 const topology = [2, 3, 2, 1];
-const iterations = 30000;
+const iterations = 20000;
 
 const data_generator = new DataGenerator();
 const net = new Net(topology);

@@ -96,7 +96,7 @@ class Net {
             neuron.calcOutputError(target_values[i]);
         }
 
-        for(let i = this.layers.length - 2; i > 1; i--) {
+        for(let i = this.layers.length - 2; i > 0; i--) {
             const layer = this.layers[i];
             for(let j = 0; j < layer.length; j++) {
                 const neuron = layer[j];
@@ -104,7 +104,7 @@ class Net {
             }
         }
 
-        for(let i = this.layers.length - 1; i > 1; i--) {
+        for(let i = this.layers.length - 1; i > 0; i--) {
             const layer = this.layers[i];
             for(let j = 0; j < layer.length; j++) {
                 const neuron = layer[j];
