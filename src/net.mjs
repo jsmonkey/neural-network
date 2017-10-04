@@ -50,7 +50,7 @@ class Net {
     }
 
     _addBiasNeurons(topology, layers) {
-        for(let i = 1; i < topology.length - 1; i++) {
+        for(let i = 1; i < topology.length; i++) {
             const layer = layers[i];
             const bias_neuron = new Neuron(true);
             for(let j = 0; j < layer.length; j++) {

@@ -26,6 +26,18 @@ class DataGenerator {
             output: [ input[0] || input[1] ],
         };
     }
+
+    generateXORData() {
+        const input = [ 
+            this.randomBinaryValue(),
+            this.randomBinaryValue(),
+        ];
+
+        return {
+            input,
+            output: [ input[0] ^ input[1] ],
+        };
+    }
 }
 
 export default DataGenerator;

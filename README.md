@@ -8,4 +8,4 @@ Implementation of basic neural network.
 
 ## Description
 
-JavaScript implementation of multilayer neural network for binary operations like `AND`, `OR` based on sigmoid function with backpropogation learning.
+JavaScript implementation of multilayer neural network for binary operations like `AND`, `OR`, `XOR` based on sigmoid function with backpropogation learning.
