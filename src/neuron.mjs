@@ -1,5 +1,4 @@
-class Neuron {
-   
+class Neuron { 
     constructor(isBiasNeuron = false) {
         this.isBiasNeuron = isBiasNeuron;
         this.input_connections = [];
@@ -44,8 +43,8 @@ class Neuron {
 
     updateInputConnectionsWeigths() {
         this.input_connections.forEach(conn => {
-            const delta_weight = this.learning_rate * this.error * conn.from.output_value + this.momentum * conn.deltaWeight;
-            conn.deltaWeight = delta_weight;
+            const delta_weight = this.learning_rate * this.error * conn.from.output_value + this.momentum * conn.delta_weight;
+            conn.delta_weight = delta_weight;
             conn.weight += delta_weight;  
         });
     }

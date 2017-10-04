@@ -2,7 +2,6 @@ import Neuron from './neuron';
 import Connection from './connection';
 
 class Net {
-
     constructor(topology) {
         this.layers = [];
         this.bias_neurons = [];
