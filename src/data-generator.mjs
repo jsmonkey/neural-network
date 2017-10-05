@@ -1,42 +1,28 @@
 class DataGenerator {
+    constructor() {
+        this.operations = new Map([
+            ['AND', (fst, scnd) => fst & scnd],
+            ['OR', (fst, scnd) => fst | scnd],
+            ['XOR', (fst, scnd) => fst ^ scnd],
+        ]);
+    }
+    
     randomBinaryValue() {
         return Math.floor(Math.random() * 2);
     }
 
-    generateANDData() {
+    generateData(operationName) {
         const input = [ 
             this.randomBinaryValue(),
             this.randomBinaryValue(),
         ];
+        
+        const operation = this.operations.get(operationName);
 
-        return {
+        return operation ? {
             input,
-            output: [ input[0] & input[1] ],
-        };
-    }
-
-    generateORData() {
-        const input = [ 
-            this.randomBinaryValue(),
-            this.randomBinaryValue(),
-        ];
-
-        return {
-            input,
-            output: [ input[0] || input[1] ],
-        };
-    }
-
-    generateXORData() {
-        const input = [ 
-            this.randomBinaryValue(),
-            this.randomBinaryValue(),
-        ];
-
-        return {
-            input,
-            output: [ input[0] ^ input[1] ],
-        };
+            output: [ operation(input[0], input[1]) ],
+        } : {};
     }
 }
 

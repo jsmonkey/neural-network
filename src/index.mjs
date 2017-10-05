@@ -8,7 +8,7 @@ const data_generator = new DataGenerator();
 const net = new Net(topology);
 
 for(let i = 0; i < iterations; i++) {
-    const data = data_generator.generateXORData();
+    const data = data_generator.generateData('OR');
 
     net.feedForward(data.input);
     net.backPropagation(data.output);
